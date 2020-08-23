@@ -65,6 +65,7 @@
     </head>
     <body>
         <div class="container">
+            <h5>Hello from Yaya</h5>
             <form action="{{ route('user_push') }}" method="POST">
                 @csrf
                 <label for="email">Email:</label>
