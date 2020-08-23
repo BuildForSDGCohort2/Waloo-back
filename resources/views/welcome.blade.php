@@ -77,19 +77,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Add user</button>
             </form>
-            @if(!$users->isEmpty())
-                @foreach($users as $user)
-                    <div>
-                        Email: <span>{{ $user['email'] }}</span>
-                        <br>
-                        Name: <span>{{ $user['name']}}</span>
-                    </div>
-                @endforeach
-            @else
-                <div>
-                    <span>No data available</span>
-                </div>
-            @endif
         </div>
     </body>
 </html>
