@@ -64,7 +64,7 @@
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container mx-5">
             <h5>Hello from Yaya</h5>
             <h5>I deployed my first laravel app on heroku</h5>
         </div>
