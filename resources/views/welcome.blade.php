@@ -66,18 +66,7 @@
     <body>
         <div class="container">
             <h5>Hello from Yaya</h5>
-            <form action="{{ route('user_push') }}" method="POST">
-                @csrf
-                <label for="email">Email:</label>
-                <div class="input-group mb-3">
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Email" aria-label="Email" required>
-                </div>
-                <label for="name">Name:</label>
-                <div class="input-group mb-3">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Username" aria-label="Username" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Add user</button>
-            </form>
+            <h5>I deployed my first laravel app on heroku</h5>
         </div>
     </body>
 </html>
