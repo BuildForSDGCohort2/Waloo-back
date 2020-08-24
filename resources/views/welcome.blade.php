@@ -64,9 +64,32 @@
         </style>
     </head>
     <body>
-        <div class="container mx-5">
-            <h5>Hello from Yaya</h5>
-            <h5>I deployed my first laravel app on heroku</h5>
+        <div class="container">
+            <form action="{{ route('user_push') }}" method="POST">
+                @csrf
+                <label for="email">Email:</label>
+                <div class="input-group mb-3">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Email" aria-label="Email" required>
+                </div>
+                <label for="name">Name:</label>
+                <div class="input-group mb-3">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Username" aria-label="Username" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add user</button>
+            </form>
+            @if(!$users->isEmpty())
+                @foreach($users as $user)
+                    <div>
+                        Email: <span>{{ $user['email'] }}</span>
+                        <br>
+                        Name: <span>{{ $user['name']}}</span>
+                    </div>
+                @endforeach
+            @else
+                <div>
+                    <span>No data available</span>
+                </div>
+            @endif
         </div>
     </body>
 </html>

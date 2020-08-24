@@ -15,6 +15,6 @@ use App\User;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['users'=>User::all()]);
 });
 Route::post('/', 'UsersController')->name('user_push');
