@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\RedirectResponse;
 class UsersController extends Controller
 {
     /**
@@ -20,6 +20,6 @@ class UsersController extends Controller
             'name' => $request->name
         ]);
         
-        return back();
+        return redirect('/');
     }
 }
