@@ -65,7 +65,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="{{ route('user_push') }}" method="POST">
+            <form action="{{ url('/add') }}" method="POST">
                 @csrf
                 <label for="email">Email:</label>
                 <div class="input-group mb-3">
